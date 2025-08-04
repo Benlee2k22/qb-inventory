@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 :root {
-    /* Color Palette */
+    /* Your Custom Color Palette */
     --primary: #6C2BD9;
     --accent: #FFBA7A;
     --background: #1C1C1E;
@@ -139,6 +139,10 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 600;
     color: var(--text);
+    margin: 0;
+}
+
+.inventory-label p {
     margin: 0;
 }
 
@@ -294,6 +298,10 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.item-slot-key p {
+    margin: 0;
+}
+
 .item-slot-amount {
     position: absolute;
     top: var(--spacing-xs);
@@ -308,6 +316,10 @@ body {
     backdrop-filter: blur(4px);
 }
 
+.item-slot-amount p {
+    margin: 0;
+}
+
 .item-price {
     position: absolute;
     top: var(--spacing-xs);
@@ -319,6 +331,10 @@ body {
     font-size: var(--font-size-xs);
     font-weight: 600;
     z-index: 3;
+}
+
+.item-price p {
+    margin: 0;
 }
 
 .item-slot-label {
@@ -471,6 +487,11 @@ body {
     backdrop-filter: blur(10px);
     min-width: 200px;
     animation: slideIn 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 @keyframes slideIn {
@@ -493,6 +514,27 @@ body {
 
 .notification-title p {
     margin: 0;
+}
+
+.notification-slot .item-slot-img {
+    width: 50px;
+    height: 50px;
+    margin: var(--spacing-sm) 0;
+}
+
+.notification-slot .item-slot-amount {
+    position: static;
+    background: var(--primary);
+    color: white;
+    margin: var(--spacing-xs) 0;
+}
+
+.notification-slot .item-slot-label {
+    position: static;
+    background: none;
+    padding: 0;
+    font-weight: 500;
+    color: var(--text);
 }
 
 /* Required Items */
@@ -634,6 +676,12 @@ body {
 
 .attachment-slot:nth-child(7) {
     transform: rotate(300deg) translate(120px) rotate(-300deg);
+}
+
+.attachment-slot img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
 
 /* Error States */
